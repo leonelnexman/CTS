@@ -526,6 +526,33 @@ video {
     border-radius: 5rem;
     width: 19.1rem;
     height: 6rem;
+    transition: all 0.3s;
+}
+
+.button-equipment-content:hover{
+    border: 0.1rem solid var(--blue);
+    transition: all 0.3s;
+    color: var(--blue);
+}
+
+.button-equipment-content:hover svg rect{
+    fill: var(--blue);
+    transition: all 0.3s;
+}
+
+.button-main-footer:hover{
+    border: 0.1rem solid var(--blue);
+    transition: all 0.3s;
+    color: var(--blue);
+}
+
+.button-main-footer:hover svg rect{
+    fill: var(--blue);
+    transition: all 0.3s;
+}
+
+.button-main-footer{
+    transition: all 0.3s;
 }
 
 

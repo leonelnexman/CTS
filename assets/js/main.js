@@ -23,30 +23,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 new fullpage('#fullPage', {
-	autoScrolling: true,
-	navigation: true,
-	scrollHorizontally: true,
-	anchors: ['main-section', 'advantages', 'equipment'],
-	menu: '#menu',
-	slidesNavigation: true,
-	afterLoad: function(origin, destination, direction) {
-	  var navv = document.querySelector('.navv');
-	  if(destination.index > 0) {
-		navv.classList.add('active');
-	  } else {
-		navv.classList.remove('active');
-	  }
-	
-	  if (destination.anchor == 'equipment') {
-		var elements = document.querySelectorAll('.equipment-content-left-one');
-		elements.forEach(function(element, index) {
-		  setTimeout(function() {
-			element.classList.add('animate__animated', 'animate__fadeInUp');
-		  }, index * 250); // Adjust the delay as needed (200ms here)
-		});
-	  }
-	}
-  })
+    autoScrolling: true,
+    navigation: true,
+    scrollHorizontally: true,
+    anchors: ['main-section', 'advantages', 'equipment'],
+    menu: '#menu',
+    slidesNavigation: true,
+    pageFlip: true, // Включаем анимацию перелистывания
+    afterLoad: function(origin, destination, direction) {
+        var navv = document.querySelector('.navv');
+        if(destination.index > 0) {
+            navv.classList.add('active');
+        } else {
+            navv.classList.remove('active');
+        }
+        
+        if (destination.anchor == 'equipment') {
+            var elements = document.querySelectorAll('.equipment-content-left-one');
+            elements.forEach(function(element, index) {
+                setTimeout(function() {
+                    element.classList.add('animate__animated', 'animate__fadeInUp');
+                }, index * 250); // Adjust the delay as needed (200ms here)
+            });
+        }
+    }
+});
 
 
 
